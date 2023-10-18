@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Base Converter</title>
+    </head>
+    <body>
+        <script src="code.js"></script>
+        <h1>Base Convertor</h1>
+        <h5>Quickly convert between different number systems and bases</h5>
+        <p>Enter Number: </p>
+        <input type="text" id="Num_In" placeholder="Enter Number">
+        <br>
+        From base 
+        <br>
+        <select id="from_base">
+            <option value="hex">Hexadecimal</option>
+            <option value="dec">Decimal</option>
+            <option value="binary">binary</option>
+        </select>
+        <br>
+        To base:
+        <br>
+        <select id="to_base">
+            <option value="hex">Hexadecimal</option>
+            <option value="dec">Decimal</option>
+            <option value="binary">Binary</option>
+        </select>
+        <button type="submit" onclick="main()">Convert</button>
+        <br>
+        Result Number:
+        
+        <p id = "y"> </p>
+    </body>
+</html>
