@@ -91,5 +91,3 @@ function hex_binary(x){
 }
 //TODO: Add dec_hex, binary_hex
 
-//
-
