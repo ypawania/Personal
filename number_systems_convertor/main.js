@@ -80,6 +80,9 @@ function hex_dec(x){
             total += (x.charAt(i).charCodeAt(0) - 55) * (16**(length - i-1));
             console.log("else if statement run");
         }
+        else{
+            throw "Invalid Hex! Use Uppercase letters!"
+        }
     }
     return total;
 }
@@ -89,5 +92,13 @@ function hex_binary(x){
     binary = dec_binary(x);
     return binary;
 }
-//TODO: Add dec_hex, binary_hex
 
+function dec_hex(x){
+    x = parseInt(x, 10);
+    console.log(x.toString(16));
+    return (x.toString(16).toUpperCase());
+}
+
+function binary_hex(x){
+    return(dec_hex(binary_dec(x)));
+}
