@@ -3,6 +3,12 @@ function main(){
     //intializes x with input number
     const x = document.getElementById("Num_In").value;
     console.log(x);
+     
+    //check for conversion to same number system
+    if (document.getElementById("from_base").value == document.getElementById("to_base").value){
+        document.getElementById("y").innerHTML = x;
+        return;
+    }
     
     //Concatonates 'from base' and 'to base' to come up with function name to run
     let functionName = document.getElementById("from_base").value;
@@ -24,14 +30,15 @@ function main(){
     document.getElementById("y").innerHTML = outNum;
     
 }
-//TODO: Add error case
 //Converts Decimal to Binary
 //@returns binary 
 function dec_binary(x){
     
     let binary = "";
     let r = 0;
-    //if (Number.isInteger(x) == false) throw "Invalid Decimal";
+    x = parseInt(x);
+    if (Number.isInteger(x) != true) throw "Invalid Decimal";
+    console.log(typeof x);
     while (x >= 1){
         r = x % 2;
         x = Math.floor(x / 2);
@@ -77,7 +84,12 @@ function hex_dec(x){
     return total;
 }
 
-//TODO: Add dec_hex, binary_hex, hex_binary functions
-//TODO: Add function that returns same value if number being converted between same number base (eg. binary to binary)
+function hex_binary(x){
+    x = hex_dec(x);
+    binary = dec_binary(x);
+    return binary;
+}
+//TODO: Add dec_hex, binary_hex
+
 //
 
