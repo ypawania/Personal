@@ -18,7 +18,7 @@ export default function Input() {
     />
   </label>
   <br/>
-  {localStorage.getItem(person) }
+  {localStorage.getItem('person') }
   </>
       
 
